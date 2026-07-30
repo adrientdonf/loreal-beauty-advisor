@@ -1,0 +1,165 @@
+/* ===== L'Oréal Brand Palette ===== */
+:root {
+  --loreal-black: #000000;
+  --loreal-gold: #C8A951;
+  --loreal-cream: #FBF7F0;
+  --loreal-white: #FFFFFF;
+  --loreal-charcoal: #2B2B2B;
+  --loreal-gold-soft: #E8D9B0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--loreal-cream);
+  color: var(--loreal-black);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--loreal-white);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Header ===== */
+.site-header {
+  background-color: var(--loreal-black);
+  padding: 24px 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--loreal-gold);
+}
+
+.site-header .logo {
+  height: 40px;
+  filter: invert(1); /* makes the black wordmark show white on black header */
+}
+
+.site-header .tagline {
+  color: var(--loreal-gold-soft);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* ===== Chat Window ===== */
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.message {
+  display: flex;
+  max-width: 85%;
+}
+
+.message--bot {
+  align-self: flex-start;
+}
+
+.message--user {
+  align-self: flex-end;
+}
+
+.bubble {
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.message--bot .bubble {
+  background-color: var(--loreal-cream);
+  border: 1px solid var(--loreal-gold-soft);
+  border-bottom-left-radius: 4px;
+}
+
+.message--user .bubble {
+  background-color: var(--loreal-black);
+  color: var(--loreal-white);
+  border-bottom-right-radius: 4px;
+}
+
+/* Shows the current question above the newest response */
+.current-question {
+  align-self: center;
+  font-size: 13px;
+  color: var(--loreal-charcoal);
+  text-align: center;
+  padding: 6px 12px;
+  background-color: var(--loreal-gold-soft);
+  border-radius: 20px;
+}
+
+.current-question__label {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* ===== Input Area ===== */
+.chat-input-form {
+  display: flex;
+  gap: 10px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--loreal-gold-soft);
+  background-color: var(--loreal-white);
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--loreal-gold-soft);
+  border-radius: 24px;
+  font-size: 15px;
+  outline: none;
+}
+
+.chat-input:focus {
+  border-color: var(--loreal-gold);
+}
+
+.send-btn {
+  background-color: var(--loreal-black);
+  color: var(--loreal-gold);
+  border: none;
+  padding: 0 22px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.send-btn:hover {
+  background-color: var(--loreal-charcoal);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 11px;
+  color: var(--loreal-charcoal);
+  background-color: var(--loreal-cream);
+  border-top: 1px solid var(--loreal-gold-soft);
+}
+
+.site-footer p {
+  margin-bottom: 4px;
+}

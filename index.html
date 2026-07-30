@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Oréal | Beauty Advisor Chatbot</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <header class="site-header">
+      <img src="images/loreal-logo.png" alt="L'Oréal" class="logo" />
+      <p class="tagline">Your Personal Beauty Advisor</p>
+    </header>
+
+    <!-- Chat Window -->
+    <main class="chat-window" id="chatWindow">
+
+      <!-- Welcome message -->
+      <div class="message message--bot">
+        <div class="bubble">
+          <p>Hi! I'm your L'Oréal Beauty Advisor. Ask me about our makeup, skincare, haircare, or fragrance products — or tell me what you're looking for and I'll help build you a routine.</p>
+        </div>
+      </div>
+
+      <!-- Shows the user's current question above the latest response -->
+      <div class="current-question" id="currentQuestion" hidden>
+        <span class="current-question__label">You asked:</span>
+        <span class="current-question__text" id="currentQuestionText"></span>
+      </div>
+
+    </main>
+
+    <!-- Input area -->
+    <form class="chat-input-form" id="chatForm">
+      <input
+        type="text"
+        id="userInput"
+        class="chat-input"
+        placeholder="Ask about a product, routine, or concern..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="send-btn" id="sendBtn">Send</button>
+    </form>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>This chatbot only answers questions about L'Oréal products, routines, and beauty recommendations.</p>
+      <p>&copy; 2026 L'Oréal Beauty Advisor Demo — Student Project, not an official L'Oréal product.</p>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
