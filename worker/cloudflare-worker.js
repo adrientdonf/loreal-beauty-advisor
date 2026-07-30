@@ -24,7 +24,7 @@ export default {
           'Authorization': `Bearer ${env.OPENAI_API_KEY}`
         },
         body: JSON.stringify({
-          model: 'gpt-4o-mini',
+          model: 'gpt-4o-mini-2024-07-18',
           messages: body.messages
         })
       });
