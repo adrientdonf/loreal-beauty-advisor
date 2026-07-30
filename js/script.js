@@ -63,14 +63,12 @@ chatForm.addEventListener('submit', async (e) => {
 
 // ===== Call OpenAI directly (TEMPORARY — will be replaced by Cloudflare Worker) =====
 async function getBotResponse() {
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  const response = await fetch('https://loreal-chatbot-worker.atd79.workers.dev/', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${OPENAI_API_KEY}`
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      model: 'gpt-4o-mini',
       messages: conversationHistory
     })
   });
